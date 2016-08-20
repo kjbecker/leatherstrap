@@ -1,8 +1,13 @@
 <?php
   class lsContainer extends lsComponentBase{
-    public function __construct(){
+    public function __construct($type = ''){
       $this->htmlNodeBase = 'div';
-      $this->classList[] = 'container';
+      if($type == ''){
+        $this->classList[] = 'container';
+      }
+      elseif($type == 'fluid'){
+        $this->classList[] = 'container-fluid';
+      }
     }
   }
 ?>

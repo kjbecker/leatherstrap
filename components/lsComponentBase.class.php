@@ -1,13 +1,8 @@
 <?php
-  class lsComponentBase{
-    protected $htmlNodeBase;
-
-    protected $classList = [];
+  class lsComponentBase extends lsNodeBase{
     protected $childrens = [];
-
-    private $html;
-    public function addBasicChild($type = 'h1', $content = 'Lorem Ipsum'){
-      $this->childrens[] = '<' . $type . '>' . $content . '</' . $type . '>';
+    public function addChild($child){
+      $this->childrens[] = $child;
     }
 
     public function build(){
@@ -19,7 +14,7 @@
       $html .= '">';
 
       foreach($this->childrens as $child){
-        $html .= $child;
+        $html .= $child->build();
       }
       $html .= '</' . $this->htmlNodeBase . '>';
       return $html;

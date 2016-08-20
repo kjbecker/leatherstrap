@@ -1,6 +1,12 @@
 <?php
+include 'components/lsNodeBase.class.php';
 include 'components/lsComponentBase.class.php';
 include 'components/lsContainer.class.php';
+include 'components/lsRow.class.php';
+include 'components/lsCol.class.php';
+include 'components/lsText.class.php';
+include 'components/lsTable.class.php';
+include 'components/lsTableRow.class.php';
 class Leatherstrap {
     //Public Variables (Debugging, ect)
     public $version = '0.01';
