@@ -11,7 +11,11 @@
       foreach($this->classList as $class){
         $html .= $class;
       }
-      $html .= '">';
+      $html .= '" ';
+      foreach($this->attributeList as $attribute){
+        $html .= $attribute['name'] . '="' . $attribute['value'] . '" ';
+      }
+      $html .= '>';
 
       foreach($this->childrens as $child){
         $html .= $child->build();

@@ -9,6 +9,8 @@ include 'components/lsTable.class.php';
 include 'components/lsTableRow.class.php';
 include 'components/lsImage.class.php';
 include 'components/lsJumbotron.class.php';
+include 'components/lsForm.class.php';
+
 class Leatherstrap {
     //Public Variables (Debugging, ect)
     public $version = '0.01';
