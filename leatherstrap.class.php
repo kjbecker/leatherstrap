@@ -10,7 +10,7 @@ include 'components/lsTableRow.class.php';
 include 'components/lsImage.class.php';
 include 'components/lsJumbotron.class.php';
 include 'components/lsForm.class.php';
-
+include 'resources/resourcefile.php';
 class Leatherstrap {
     //Public Variables (Debugging, ect)
     public $version = '0.01';
@@ -24,10 +24,13 @@ class Leatherstrap {
     private $page;
 
     private $head;
-
+   
     private $pageTitle;
     private $pageStyles = [];
     private $pageScripts = [];
+
+    private $pageHeader;
+    private $pageFooter;
 
     private $body;
     
@@ -44,8 +47,15 @@ class Leatherstrap {
     
     public function addComponent($component){
       $this->pageComponents[] = $component;
+    }	
+
+    public function setHeader($header){
+	    $this->pageHeader = getResource($header);
     }
 
+    public function setFooter($footer){
+    	$this->pageFooter = getResource($footer);
+    }
     //Page construction functions
 
     private function makeHead(){
@@ -64,10 +74,12 @@ class Leatherstrap {
     }
 
     private function makeBody(){
-      $this->body = '<body>';
+	$this->body = '<body>';
+	if(isset($this->pageHeader))$this->body .= $this->pageHeader->build();;
       foreach($this->pageComponents as $component){
         $this->body .= $component->build();
       }
+	if(isset($this->pageFooter))$this->body .= $this->pageFooter->build();
       $this->body .= '</body>';
       return $this->body;
     }
