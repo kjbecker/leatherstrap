@@ -9,7 +9,7 @@
       $html = '<';
       $html .= $this->htmlNodeBase . ' class="';
       foreach($this->classList as $class){
-        $html .= $class;
+        $html .= $class . " ";
       }
       $html .= '" ';
       foreach($this->attributeList as $attribute){

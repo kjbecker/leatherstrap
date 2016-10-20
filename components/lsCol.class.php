@@ -4,7 +4,7 @@
     public function __construct($size = 'xs', $width = 12){
       $this->htmlNodeBase = 'div';
       $this->colWidth = $width;
-      $this->classList[] = 'col-' . $size . '-' . $width;
+      $this->addClass('col-' . $size . '-' . $width);
     } 
   }
 ?>

@@ -10,6 +10,13 @@ include 'components/lsTableRow.class.php';
 include 'components/lsImage.class.php';
 include 'components/lsJumbotron.class.php';
 include 'components/lsForm.class.php';
+include 'components/lsRawHTML.class.php';
+include 'components/lsInput.class.php';
+include 'components/lsButton.class.php';
+include 'components/lsButtonGroup.class.php';
+include 'components/lsBadge.class.php';
+include 'components/lsLabel.class.php';
+
 include 'resources/resourcefile.php';
 class Leatherstrap {
     //Public Variables (Debugging, ect)
@@ -49,6 +56,9 @@ class Leatherstrap {
       $this->pageComponents[] = $component;
     }	
 
+    public function addChild($child){
+    	$this->addComponent($child);
+    }
     public function setHeader($header){
 	    $this->pageHeader = getResource($header);
     }

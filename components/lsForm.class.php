@@ -15,6 +15,10 @@
       $this->addAttribute('action', $action);
       $this->addAttribute('method', $method);
     }
-    
+
+	public function addInput($input){
+		$this->addChild($input);
+	}
+
   }
 ?>
