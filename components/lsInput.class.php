@@ -21,12 +21,10 @@
 			switch($this->inputType){
 			case "text":
 			case "password":
-				$div = new lsComponentBase();
-				$div->setNodeBase("div");
+				$div = new lsComponentBase("div");
 				$div->addClass("form-group");
 
-				$label = new lsComponentBase();
-				$label->setNodeBase("label");
+				$label = new lsComponentBase("label");
 				$label->addAttribute("for", $this->inputName);
 				$label->addChild(new lsRawHTML($this->label));
 

@@ -16,6 +16,15 @@ include 'components/lsButton.class.php';
 include 'components/lsButtonGroup.class.php';
 include 'components/lsBadge.class.php';
 include 'components/lsLabel.class.php';
+include 'components/lsProgressBar.class.php';
+include 'components/lsPagination.class.php';
+include 'components/lsBreadcrumbs.class.php';
+include 'components/lsPager.class.php';
+include 'components/lsListGroup.class.php';
+include 'components/lsListGroupItem.class.php';
+include 'components/lsPanel.class.php';
+include 'components/lsDropdown.class.php';
+include 'components/lsCollapse.class.php';
 
 include 'resources/resourcefile.php';
 class Leatherstrap {
@@ -48,6 +57,7 @@ class Leatherstrap {
       $this->bootstrapLocation = $this->where . '/bootstrap-' . $this->bootstrapVersion .'-dist'; 
       $this->pageTitle = $title;
       $this->pageStyles[] = $this->bootstrapLocation . '/css/bootstrap.min.css';
+      $this->pageScripts[] = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
       $this->pageScripts[] = $this->bootstrapLocation . '/js/bootstrap.min.js';
     }
     //Page addition functions
@@ -77,7 +87,7 @@ class Leatherstrap {
         $this->head .= '<link href="' . $style . '" rel="stylesheet">';
       }
       foreach($this->pageScripts as $script){
-        $this->head .= '<script scr="' . $script . '"></script>';
+        $this->head .= '<script src="' . $script . '"></script>';
       }
       $this->head .= '</head>';
       return $this->head;

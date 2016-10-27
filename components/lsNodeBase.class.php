@@ -1,6 +1,6 @@
 <?php
   class lsNodeBase{
-    protected $htmlNodeBase;
+    public $htmlNodeBase;
     protected $classList = [];
     protected $attributeList = [];    
 

@@ -1,6 +1,12 @@
 <?php
   class lsComponentBase extends lsNodeBase{
     protected $childrens = [];
+    
+    public function __construct($nodeBase, $quickInnerHtml = null){
+	    $this->htmlNodeBase = $nodeBase;
+	    if($quickInnerHtml != null) $this->addChild(new lsRawHtml($quickInnerHtml));
+    }
+
     public function addChild($child){
       $this->childrens[] = $child;
     }
