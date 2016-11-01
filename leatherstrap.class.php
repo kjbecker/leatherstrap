@@ -35,7 +35,7 @@ include 'components/lsMediaObject.class.php';
 include 'resources/resourcefile.php';
 class Leatherstrap {
     //Public Variables (Debugging, ect)
-    public $version = '0.01';
+    public $version = '1.0';
     public $here = __DIR__;
     public $where = '/include/leatherstrap';
     //Private Variables (Location info, version info, stuff that might change a lot)
@@ -62,9 +62,9 @@ class Leatherstrap {
     public function __construct($title = ''){
       $this->bootstrapLocation = $this->where . '/bootstrap-' . $this->bootstrapVersion .'-dist'; 
       $this->pageTitle = $title;
-      $this->pageStyles[] = $this->bootstrapLocation . '/css/bootstrap.min.css';
+      $this->pageStyles[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
       $this->pageScripts[] = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
-      $this->pageScripts[] = $this->bootstrapLocation . '/js/bootstrap.min.js';
+      $this->pageScripts[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js';
     }
     //Page addition functions
     
