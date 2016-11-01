@@ -1,0 +1,19 @@
+{
+    "name": "birchdesk/leatherstrap",
+    "type": "library",
+    "description": "PHP Library for building HTML Bootstrap Pages.",
+    "keywords": ["html","bootstrap"],
+    "homepage": "https://github.com/kjbecker/leatherstrap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyle James Becker",
+            "email": "kjamesbecker@gmail.com",
+            "homepage": "http://kylejamesbecker.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+            "files": ["leatherstrap.class.php"]
+    }
+}
