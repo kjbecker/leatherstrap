@@ -2,10 +2,7 @@
   class lsForm extends lsComponentBase{
     public function __construct($type = '', $action='', $method='POST'){
       $this->htmlNodeBase = 'form';
-      if($type == ''){
-        $this->classList[] = '';
-      }
-      elseif($type == 'inline'){
+      if($type == 'inline'){
         $this->classList[] = 'form-inline';
       }
       elseif($type == 'horizontal'){

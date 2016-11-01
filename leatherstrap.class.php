@@ -25,6 +25,12 @@ include 'components/lsListGroupItem.class.php';
 include 'components/lsPanel.class.php';
 include 'components/lsDropdown.class.php';
 include 'components/lsCollapse.class.php';
+include 'components/lsTabs.class.php';
+include 'components/lsPills.class.php';
+include 'components/lsDynamicTabs.class.php';
+include 'components/lsDynamicPills.class.php';
+include 'components/lsNavBar.class.php';
+include 'components/lsMediaObject.class.php';
 
 include 'resources/resourcefile.php';
 class Leatherstrap {

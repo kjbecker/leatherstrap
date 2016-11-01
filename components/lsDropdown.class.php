@@ -1,13 +1,21 @@
 <?php
 	class lsDropdown extends lsComponentBase{
 		private $list;
-		public function __construct($text){
-			$this->htmlNodeBase = 'div';
-			$this->addClass("dropdown");
-			$button = new lsButton($text . '<span class="caret"></span>', "primary");
+		public function __construct($text, $navOptions = null){
+			if($navOptions == true){
+				$this->htmlNodeBase = 'li';
+				$button = new lsComponentBase('a');
+				$button->addAttribute("href", "#");
+				$button->addChild(new lsRawHtml($text . '<span class="caret"></span>'));
+			}
+			else{
+				$this->htmlNodeBase = 'div';
+				$button = new lsButton($text . '<span class="caret"></span>', "primary");
+			}
 			$button->addAttribute("data-toggle", "dropdown");
 			$button->addClass("dropdown-toggle");
 			$this->addChild($button);
+			$this->addClass("dropdown");
 			$this->list = new lsComponentBase("ul");
 			$this->list->addClass("dropdown-menu");
 			$this->addChild($this->list);
