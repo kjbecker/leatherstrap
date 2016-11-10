@@ -2,10 +2,11 @@
 	class lsCollapse extends lsComponentBase{
 		private $button;
 		private $div;
-		public function __construct($id, $text, $type="default", $size="md", $block=false, $active=null){
-			$this->button = new lsButton($text, $type, $size, $block, $active);
+		public function __construct($id, $text, $type="default", $special){
+			$this->button = new lsButton($text, $type, $special);
 			$this->button->addAttribute("data-toggle", "collapse");
 			$this->button->addAttribute("data-target", "#" . $id);
+			if(strpos($special, "open") !== false) $this->div->addClass("in");
 			$this->div = new lsComponentBase("div");
 			$this->div->addAttribute("id", $id);
 			$this->div->addClass("collapse");

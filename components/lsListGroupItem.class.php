@@ -1,32 +1,16 @@
 <?php
 	class lsListGroupItem extends lsComponentBase{
 		private $href;
-		public function __construct($href = "#", $contextual = null , $special = null){
+		public function __construct($href = "#", $special = null){
 			$this->href = $href;
 			$this->htmlNodeBase = "li";
 			$this->addClass('list-group-item');
-			switch($contextual){
-				case "success":
-					$this->addClass("list-group-item-success");
-					break;
-				case "info":
-					$this->addClass("list-group-item-info");
-					break;
-				case "warning":
-					$this->addClass("list-group-item-warning");
-					break;
-				case "danger":
-					$this->addClass("list-group-item-danger");
-					break;
-			}
-			switch($special){
-				case "active":	
-					$this->addClass("active");
-					break;
-				case "disabled":
-					$this->addClass("disabled");
-					break;
-			}
+			if(strpos($special, "success") !== false) $this->addClass("list-group-item-success");
+			if(strpos($special, "info") !== false) $this->addClass("list-group-item-info");
+			if(strpos($special, "warning") !== false) $this->addClass("list-group-item-warning");
+			if(strpos($special, "danger") !== false) $this->addClass("list-group-item-danger");
+			if(strpos($special, "active") !== false) $this->addClass("active");
+			if(strpos($special, "disabled") !== false) $this->addClass("disbaled");
 		}
 		
 		public function makeLink(){

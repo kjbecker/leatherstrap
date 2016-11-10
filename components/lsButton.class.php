@@ -1,37 +1,22 @@
 <?php
 	class lsButton extends lsComponentBase{
-		public function __construct($text, $type="default", $size="md", $block=false, $active=null){
+		public function __construct($text, $type="default", $special){
 			$this->htmlNodeBase = "button";
 			$this->addAttribute("type", "button");
 			$this->addClass("btn");
 			$this->addClass("btn-" . $type);
-			switch($size){
-				case "xs":
-				case "extra small":
-				case "extra-small":
-					$this->addClass("btn-xs");
-					break;
-				case "sm":
-				case "small":
-					$this->addClass("btn-sm");
-					break;
-				case "md":
-				case "medium":
-					$this->addClass("btn-md");
-					break;
-				case "lg":
-				case "large":
-					$this->addClass("btn-lg");
-					break;
-			}
-			if($block)$this->addClass("btn-block");
-			if($active == null){}
-			elseif($active == true){
-				$this->addClass('active');
-			}
-			elseif($active == false){
-				$this->addClass("disabled");
-			}
+			if(strpos($special, "xs") !== false) $this->addClass("btn-xs");
+			if(strpos($special, "extra-small") !== false) $this->addClass("btn-xs");
+			if(strpos($special, "extra small") !== false) $this->addClass("btn-xs");
+			if(strpos($special, "sm") !== false) $this->addClass("btn-sm");
+			if(strpos($special, "small") !== false) $this->addClass("btn-sm");
+			if(strpos($special, "lg") !== false) $this->addClass("btn-lg");
+			if(strpos($special, "large") !== false) $this->addClass("btn-lg");
+			if(strpos($special, "md") !== false) $this->addClass("btn-md");
+			if(strpos($special, "medium") !== false) $this->addClass("btn-md");
+			if(strpos($special, "blcok") !== false)  $this->addClass("btn-block");
+			if(strpos($special, "active") !== false) $this->addClass('active');
+			if(strpos($special, "disabled") !== false) $this->addClass('disabled');
 			$this->addChild(new lsRawHTML($text));
 		}	
 	

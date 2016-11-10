@@ -15,7 +15,7 @@
 			$html .= $text;
 			if($special != "active") $html .= '</a>';
 			$html .= '</li>';
-			$this->addChild(new lsRawHtml($html));
+			$this->childrens[] = new lsRawHtml($html);
 		}
 	}
 ?>
