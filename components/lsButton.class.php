@@ -14,7 +14,7 @@
 			if(strpos($special, "large") !== false) $this->addClass("btn-lg");
 			if(strpos($special, "md") !== false) $this->addClass("btn-md");
 			if(strpos($special, "medium") !== false) $this->addClass("btn-md");
-			if(strpos($special, "blcok") !== false)  $this->addClass("btn-block");
+			if(strpos($special, "block") !== false)  $this->addClass("btn-block");
 			if(strpos($special, "active") !== false) $this->addClass('active');
 			if(strpos($special, "disabled") !== false) $this->addClass('disabled');
 			$this->addChild(new lsRawHTML($text));
