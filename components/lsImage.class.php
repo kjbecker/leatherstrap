@@ -5,7 +5,7 @@
     private $width;
     private $height;
 
-    public function __construct($src, $alt = 'Image', $type = 'responsive', $width = -1, $height = -1){
+    public function __construct($src, $type = 'responsive', $alt = 'Image', $width = -1, $height = -1){
       $this->htmlNodeBase = 'img';
       $this->addAttribute('src', $src);
       $this->addAttribute('alt', $alt);
