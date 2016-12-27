@@ -1,3 +1,5 @@
+#NOTE:
+leatherstrap is still in development. Changes may occure without warning, causing production code to stop working. Please review changes before updating your version of leatherstrap.
 # leatherstrap
 A PHP framework for generating HTML pages using bootstrap published by Birchdesk and lincienced under the MIT licience.
 ## What Is Leatherstrap?
