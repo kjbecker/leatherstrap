@@ -1,6 +1,6 @@
 <?php
   class lsJumbotron extends lsComponentBase{ 
-    public function __construct($type = ''){
+    public function __construct(){
       $this->htmlNodeBase = 'div';
       $this->addClass('jumbotron');
     }
