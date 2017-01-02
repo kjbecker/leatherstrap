@@ -6,7 +6,7 @@
 
     public function __construct($tabletype = ''){
       if($tabletype == 'responsive'){
-        $this->responsive = false;
+        $this->responsive = true;
       }
       else{
         $this->htmlNodeBase = 'table';
