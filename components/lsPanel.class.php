@@ -18,7 +18,7 @@
 			else{
 				$this->header = $header;
 			}
-			$header->addClass("panel-heading");
+			$this->header->addClass("panel-heading");
 			if($this->collapsible){
 				$this->header->addAttribute("data-toggle", "collapse");
 				$this->header->addAttribute("href", "#" . $this->id);
