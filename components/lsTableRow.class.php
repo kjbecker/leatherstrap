@@ -33,7 +33,7 @@
       foreach($this->cells as $cell){
         $html .= '<' . $node . '>' . $cell . '</' . $node .'>';
       }
-      $html .= '</' . $node . '>';
+      $html .= '</tr>';
       return $html;
     }
   }
